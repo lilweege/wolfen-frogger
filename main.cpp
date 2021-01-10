@@ -345,9 +345,7 @@ private:
 	olc::vd2d startPos;
 	double startAngle;
 
-	Car* car1;
-	Car* car2;
-	Car* car3;
+	Car *car1, *car2, *car3, *car4;
 	std::vector<WorldObject*> objs;
 
 	olc::Pixel* bgBuffer;
@@ -403,14 +401,17 @@ public:
 		);
 
 		olc::vd2d carDim = { worldWidth / 15.0, worldHeight / 15.0 };
-		car1 = new Car({ 0, 3 }, carDim, { 1, 0 }, 5.0, olc::RED);
+		car1 = new Car({ 0, 3 }, carDim, { 1, 0 }, 10.0, olc::RED);
 		objs.push_back(car1);
 
-		car2 = new Car({ 0, 7 }, carDim, { -1, 0 }, 10.0, olc::GREEN);
+		car2 = new Car({ 0, 7 }, carDim, { -1, 0 }, 5.0, olc::GREEN);
 		objs.push_back(car2);
 
 		car3 = new Car({ 0, 11 }, carDim, { 1, 0 }, 3.0, olc::BLUE);
 		objs.push_back(car3);
+
+		car4 = new Car({ 0, 15 }, carDim, { -1, 0 }, 7.0, olc::YELLOW);
+		objs.push_back(car4);
 
 
 		return true;
